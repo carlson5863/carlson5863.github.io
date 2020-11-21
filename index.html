@@ -36,9 +36,6 @@ body {
 .navbar {
   overflow: hidden;
   background-color: #333;
-  position: sticky;
-  position: -webkit-sticky;
-  top: 0;
 }
 
 /* Style the navigation bar links */
@@ -51,12 +48,6 @@ body {
   text-decoration: none;
 }
 
-
-/* Right-aligned link */
-.navbar a.right {
-  float: right;
-}
-
 /* Change color on hover */
 .navbar a:hover {
   background-color: #ddd;
@@ -67,6 +58,51 @@ body {
 .navbar a.active {
   background-color: #666;
   color: white;
+}
+  
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: #ddd;
+  color: black;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: #ddd;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: black;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
 }
 
 /* Column container */
